@@ -1,0 +1,99 @@
+{% load static %}
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+	  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <table >
+    <thead>
+      <tr>
+        <th>Comapny_name</th>
+        <th>Realtionship_name</th>
+        <th>Survey_name</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Score</th>
+        <th>Created_date</th>
+        <th>updated_date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       {% for object in table %}
+      <tr>
+        <td>{{object.Comapny_name}}</td>
+        <td>{{object.Realtionship_name}}</td>
+        <td>{{object.Survey_name}}</td>
+        <td>{{object.Name}}</td>
+        <td>{{object.Email}}</td>
+        <td>{{object.Score}}</td>
+        <td>{{object.Created_date}}</td>
+        <td>{{object.updated_date}}</td>
+
+      </tr>
+       {% endfor %}
+<!--      <tr>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--        <td>Item</td>-->
+<!--      </tr>-->
+
+    </tbody>
+  </table>
+  <!-- script type="text/javascript">
+    $('table tr').each(function(){
+    $(this).find('th').first().addClass('first');
+    $(this).find('th').last().addClass('last');
+    $(this).find('td').first().addClass('first');
+    $(this).find('td').last().addClass('last');
+    });
+
+    $('table tr').first().addClass('row-first');
+    $('table tr').last().addClass('row-last');
+    </script> -->
+
+
+</body>
+</html>
